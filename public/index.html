@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SWE 4070 · Bootstrap Student Demo</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <span class="navbar-brand mb-0 h1">SWE 4070 · Bootstrap Demo</span>
+        <span class="navbar-text text-white-50">Students + SQLite</span>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <div class="row g-4">
+        <div class="col-12 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-header bg-white">
+              <h1 class="h5 mb-0 text-primary">Add a student</h1>
+            </div>
+            <div class="card-body">
+              <div id="formAlert" class="alert alert-warning d-none" role="alert"></div>
+              <form id="studentForm" novalidate>
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nameInput"
+                    name="name"
+                    placeholder="e.g. Precious Asemeit"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="courseInput" class="form-label">Course</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="courseInput"
+                    name="course"
+                    placeholder="e.g. SWE 4070"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <div class="card shadow-sm h-100">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+              <h2 class="h5 mb-0 text-primary">Students</h2>
+              <span id="studentCount" class="badge text-bg-secondary">0</span>
+            </div>
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-striped table-hover mb-0 align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Course</th>
+                      <th scope="col" class="text-end">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="studentsTableBody">
+                    <tr>
+                      <td colspan="4" class="text-center text-muted py-4">Loading…</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

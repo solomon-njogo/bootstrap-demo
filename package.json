@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap-demo",
+  "version": "1.0.0",
+  "description": "SWE 4070 Bootstrap demo with SQLite student CRUD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "bootstrap": "5.3.8",
+    "express": "^4.21.2"
+  }
+}
